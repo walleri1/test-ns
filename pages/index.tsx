@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ProductType, UploadType } from "../types";
 import styles from "../styles/index.module.css";
 import Script from 'next/script'
+import Link from 'next/link'
 
 const client = new SiteClient(
   process.env.NEXT_PUBLIC_DATOCMS_READONLY_API_KEY ||
@@ -39,9 +40,9 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>My Next.js E-commerce</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://cdn.snipcart.com" />
-        <link
+        <Link rel="icon" href="/favicon.ico" />
+        <Link rel="preconnect" href="https://cdn.snipcart.com" />
+        <Link
           rel="stylesheet"
           href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css"
         />
