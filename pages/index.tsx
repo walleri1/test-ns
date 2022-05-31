@@ -54,6 +54,7 @@ export default function Home() {
             products.map((product, i) => <Product product={product} key={i} />)}
         </div>
       </main>
+      @next/next/no-sync-scripts
       <script src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
       <div
         hidden
