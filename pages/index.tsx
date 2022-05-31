@@ -4,6 +4,7 @@ import { SiteClient } from "datocms-client";
 import { useEffect, useState } from "react";
 import { ProductType, UploadType } from "../types";
 import styles from "../styles/index.module.css";
+import Script from 'next/script'
 
 const client = new SiteClient(
   process.env.NEXT_PUBLIC_DATOCMS_READONLY_API_KEY ||
@@ -54,8 +55,7 @@ export default function Home() {
             products.map((product, i) => <Product product={product} key={i} />)}
         </div>
       </main>
-      @next/next/no-sync-scripts
-      <script src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+      <Script src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></Script>
       <div
         hidden
         id="snipcart"
